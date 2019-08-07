@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { host: 'https://e1b9d3c81fbf40e1b5594d860dd079b4.vfs.cloud9.us-east-2.amazonaws.com/' }
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that
   # your test database is "scratch space" for the test suite and is wiped
