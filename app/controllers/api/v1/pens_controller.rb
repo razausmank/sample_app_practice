@@ -12,9 +12,9 @@ module Api::V1
             def update
               if (authenticate_pen!)
               @pen.update( params.require(:pen).permit(:name, :password))
-              render json:{status: 'Success', message:'created User', data:@pen}
+ 
               else 
-                render json:{status: 'Error', message:'created User failed', data:@pen.errors}
+ 
               end
             end
                     
