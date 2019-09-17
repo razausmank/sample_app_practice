@@ -6,7 +6,7 @@ module Api::V1
     # POST /v1/users
               def index
                 @pens = Pen.all
-              respond_with @pens
+                             render json:{status: 'Error', message:'created User failed', data:@pen}
               end
             
             def update
@@ -14,7 +14,7 @@ module Api::V1
               @pen.update( params.require(:pen).permit(:name, :password))
  
               else 
- 
+                render json:{status: 'Error', message:'created User failed', data:@pen.errors}
               end
             end
                     
