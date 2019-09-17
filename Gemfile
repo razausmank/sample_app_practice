@@ -37,10 +37,10 @@ group :test do
   gem 'guard',                    '2.13.0'
   gem 'guard-minitest',           '2.4.4'
 end
-
+ #gem 'fog', '1.42'
 group :production do
   gem 'pg', '0.20.0'
-  gem 'fog', '1.42'
+ 
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
