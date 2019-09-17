@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190830145435) do
+ActiveRecord::Schema.define(version: 20190917084101) do
+
+  create_table "cars", force: :cascade do |t|
+    t.string "name"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "token"
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text "content"
@@ -20,6 +28,14 @@ ActiveRecord::Schema.define(version: 20190830145435) do
     t.string "picture"
     t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_microposts_on_user_id"
+  end
+
+  create_table "pens", force: :cascade do |t|
+    t.string "name"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "token"
   end
 
   create_table "relationships", force: :cascade do |t|
@@ -45,6 +61,7 @@ ActiveRecord::Schema.define(version: 20190830145435) do
     t.datetime "activated_at"
     t.string "reset_digest"
     t.datetime "reset_sent_at"
+    t.string "token"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

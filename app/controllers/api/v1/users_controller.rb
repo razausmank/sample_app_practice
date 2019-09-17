@@ -7,6 +7,7 @@ module Api::V1
     def index
       respond_with User.all
     end
-
+    
+   
   end
 end

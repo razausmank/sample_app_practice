@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :pens
   namespace :api, defaults: {format: :json} do
       namespace :v1 do
-        resources :users
+        resources :pens
       end
     end
 
@@ -27,4 +28,6 @@ root 'static_pages#home'
   resources :password_resets, only: [:new, :create, :edit, :update]
   
   resources :microposts,  only: [:create, :destroy]  
+  
+  resources :cars 
 end
